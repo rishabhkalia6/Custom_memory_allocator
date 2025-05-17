@@ -58,5 +58,44 @@ gcc memory_allocator.c -o allocator
 ```
 In your linux terminal by running this command you can then compile the program and create the executable named **allocator**.
 
+---
+
 # 💻 Outputs
+
+![image](https://github.com/rishabhkalia6/Custom_memory_allocator/blob/main/screenshots/Screenshot%20from%202025-05-16%2021-26-48.png?raw=true)
+
+![image](https://github.com/rishabhkalia6/Custom_memory_allocator/blob/main/screenshots/Screenshot%20from%202025-05-16%2021-28-00.png?raw=true)
+
+![image](https://github.com/rishabhkalia6/Custom_memory_allocator/blob/main/screenshots/Screenshot%20from%202025-05-16%2021-28-33.png?raw=true)
+
+![image](https://github.com/rishabhkalia6/Custom_memory_allocator/blob/main/screenshots/Screenshot%20from%202025-05-16%2021-28-40.png?raw=true)
+
+
+These screenshots shows the terminal output from running multiple test cases on the **Custom Memory Allocator**. Each test case includes a sequence of memory allocations and deallocations, simulating how a real operating system handles dynamic memory.
+
+- The allocator uses a **fixed-size memory pool (4096 bytes)** and supports:
+
+  - Allocation using the First-Fit strategy
+
+  - **Block splitting** when requested size is smaller than available space
+
+  - **Coalescing** of adjacent free blocks upon deallocation
+
+- Test cases include both positive numbers (allocate) and negative numbers (free previously allocated memory)
+
+Each section includes:
+- The current **free list status**
+
+- Log of each **allocation and address**
+
+- Log of each **deallocation**
+
+- A clean **"Test case completed"** message confirming correct processing
+
+This output demonstrates the allocator's ability to manage memory effectively, prevent fragmentation, and maintain a consistent internal structure.
+
+
+
+
+
 
